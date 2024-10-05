@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <h1 class="game-title">SNAKE PIXEL GAME</h1>
+    <div class="game-container">
+      <div class="sidebar game-info">
+        <div class="score-container">
+          <h3>Score</h3>
+          <h1 id="score">0</h1>
+        </div>
+        <div class="button-container">
+          <img src="restart.png" id="restartBtn" class="btns">
+          <img src="pause.png" id="pauseBtn" class="btns">
+          <button id="soundBtn" class="sound-btn">🔇</button>
+        </div>
+        <p id="gamePause" style="display: none;">GAME PAUSED</p>
+      </div>
+      <canvas id="canvas_field" width="832" height="576"></canvas>
+      <div class="high-scores">
+        <h2>High Scores</h2>
+        <table id="highScoresTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span id="currentPage"></span>
+          <div class="pagination-buttons">
+            <button id="prevPage">Previous</button>
+            <button id="nextPage">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="body.png" id="bodySnake" style="display: none;">
+    <img src="happyHead.png" id="headSnake" style="display: none;">
+    <img src="eatingHead.png" id="eatingSnake" style="display: none;">
+    <img src="food.png" id="food" style="display: none;" >
+    <img src="deadHead.png" id="deadHead" style="display: none;" >
+    <div id="gameOverPopup" class="popup">
+      <div class="popup-content">
+        <h2 id="gameOverTitle">GAME OVER!</h2>
+        <p id="gameOverMessage">Your score: <span id="finalScore"></span></p>
+        <input type="text" id="playerName" placeholder="Enter your name">
+        <button id="submitScore">Submit Score</button>
+      </div>
+    </div>
+  </body>
+</html>

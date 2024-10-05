@@ -1,0 +1,14 @@
+{
+  "name": "snake_game",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node copy-assets.js && cd server && npm i",
+    "start": "cd server && node server.js"
+  },
+  "devDependencies": {
+    "vite": "^5.1.6"
+  }
+}
